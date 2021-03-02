@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block content %}
+  <h2>Sign Up</h2>
+  {% if error %}<div class="error"><strong>Error:</strong> {{ error }}</div>{% endif %}
+  <form action="" method="post">
+    <dl>
+      <dt>Amount spent:
+      <dd>$<input type="number" name="amount" id="amount" size="30" value="{{ request.form.amount }}">
+      <dt>What was it spent on:
+      <dd><input type="text" name="item" id="item" size="30" value="{{ request.form.item }}">
+      <dt>Date Spent:
+      <dd><input type="date" id="date" name="purchase_date"
+       value="{{ request.form.purchase_date }}"
+       min="{{first_day}}" max="{{last_day}}">
+      <dt>Category:
+      <dd><select id="category" name="categories" value="{{ request.form.category }}">
+        {% for category in categories %}
+          <option value="{{category.id}}">{{category.name}}</option>
+        {% endfor %}
+      </select>
+    </dl>
+    <div class="actions"><input type="submit" value="Submit" id="addPurchaseButton"></div>
+  </form>
+{% endblock %}

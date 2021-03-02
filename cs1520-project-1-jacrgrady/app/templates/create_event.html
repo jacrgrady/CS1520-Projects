@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block content %}
+    {% if error %}<div class="error"><strong>Error:</strong> {{ error }}</div>{% endif %}
+   <form action="" method="post">
+  <dl>
+    <dt>Title:
+    <dd><input type="text" name="title" size="30" value="{{ request.form.title }}">
+    <dt>Description:
+    <dd><input type="text" name="description" size="30" value="{{ request.form.description }}">
+    <dt>Start Date:
+    <dd><input type="datetime-local" id="start-time"
+  name="start-time" value="{{ request.form.start }}">
+    <dt>End Date:
+    <dd><input type="datetime-local" id="end-time"
+  name="end-time" value="{{ request.form.end }}">
+
+  </dl>
+  <div class="actions"><input type="submit" value="Create Event"></div>
+  </form>
+{% endblock %}

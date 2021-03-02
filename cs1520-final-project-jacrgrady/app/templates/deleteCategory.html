@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block content %}
+  <h2>Sign Up</h2>
+  {% if error %}<div class="error"><strong>Error:</strong> {{ error }}</div>{% endif %}
+  <form action="" method="post">
+    <dl>
+      <dt>Category
+      <dd><select id="category" name="categories" value="{{ request.form.category }}">
+        {% for category in categories %}
+          <option value="{{category.id}}">{{category.name}}</option>
+        {% endfor %}
+      </select>
+    </dl>
+    <div class="actions"><input type="submit" value="Submit" id="deleteCategoryButton"></div>
+  </form>
+{% endblock %}

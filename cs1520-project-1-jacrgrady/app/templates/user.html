@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block content %}
+    <h1>{{ user.username }}</h1>
+
+    <h2>{{ user.username }}'s hosted events</h2>
+    {% for event in user.hosted_events %}
+        {% include '_event.html' %}
+    {% endfor %}
+    <h2>{{ user.username }}'s attended events</h2>
+    {% for event in events %}
+        {%if event not in user.hosted_events%}
+            {% include '_event.html' %}
+        {% endif %}
+    {% endfor %}
+{% endblock %}

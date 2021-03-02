@@ -1,0 +1,33 @@
+<html>
+    <head>
+        {% if title %}
+        <title>{{ title }} - Hosting Website</title>
+        {% else %}
+        <title>Welcome to Hosting Website</title>
+        {% endif %}
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+        <script type="text/javascript" src="{{ url_for('static', filename='script.js') }}"></script>
+        <link rel="shortcut icon" href="#">
+    </head>    
+	<body><div class="navigation">
+            Final Project:
+            {% if g.user %}
+                Hello {{g.user.username}}|
+            {% endif %}
+            <a href="{{ url_for('index') }}">Home</a>|
+            {% if g.user %}
+                <a href="{{ url_for('logout') }}">sign out</a>|
+                <a href="{{ url_for('addPurchase') }}">Add Purchase</a>|
+                <a href="{{ url_for('newCategory') }}">Add Category</a>|
+                <a href="{{ url_for('deleteCategory') }}">Delete Category</a>
+            {% else %}
+                <a href="{{ url_for('register') }}">sign up</a> |
+                <a href="{{ url_for('login') }}">sign in</a>
+            {% endif %}
+        </div>
+        <hr>
+        <div class="content">
+            {% block content %}{% endblock %}
+        </div>
+    </body>
+</html>

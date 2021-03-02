@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block content %}
+{% if error %}<div class="error"><p><strong>Error:</strong> {{ error|safe }}</p></div>{% endif %}
+	{% if g.user%}
+		<H3>Please pick a chat from the left side<H3>
+	{% else %}
+		<h3>Please log in</h3>
+	{% endif %}
+{% endblock %}

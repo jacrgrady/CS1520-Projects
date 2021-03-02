@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block content %}
+
+    {% if g.user %}
+        <h1>Hi, {{ user.username }}!</h1>
+        <h2> Your Events</h2>
+            {% for event in user.hosted_events %}
+                {% include '_event.html' %}
+            {% endfor %}
+        <h2>Other Events</h2>
+    {% else %}
+        <H1>Welcome to Event Hosting </H1>
+    {% endif %}
+
+    {% for event in events %}
+    {%if event not in user.hosted_events%}
+        {% include '_event.html' %}
+    {% endif %}
+        
+    {% endfor %}
+
+{% endblock %}

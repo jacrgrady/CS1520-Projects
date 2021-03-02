@@ -1,0 +1,15 @@
+<!--sub-template for a user -->
+<a href="{{ url_for('user', username=user.username) }}" class="event_link">
+<table>
+    <tr>
+        <td width="70px">
+            <a href="{{ url_for('user', username=user.username) }}">
+                    <img src="{{ user.avatar(70) }}" />
+                </a>
+        </td>
+        <td>
+            <h3>{{ user.username }}</h3>
+        </td>
+    </tr>
+</table>
+</a>

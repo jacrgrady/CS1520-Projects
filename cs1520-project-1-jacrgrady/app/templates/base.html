@@ -1,0 +1,28 @@
+<!--Base template that all other templates extend.-->
+<html>
+    <head>
+        {% if title %}
+        <title>{{ title }} - Hosting Website</title>
+        {% else %}
+        <title>Welcome to Hosting Website</title>
+        {% endif %}
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    </head>    
+
+    <body>
+        <div class="navigation">
+            Event Hosting:
+            <a href="{{ url_for('index') }}">Home</a>|
+            {% if g.user %}
+                <a href="{{ url_for('logout') }}">sign out</a>|
+                <a href="{{url_for('user',username=g.user.username)}}">{{ g.user.username }}</a> |
+                <a href="{{url_for('create_event')}}">Create Event</a>
+            {% else %}
+                <a href="{{ url_for('register') }}">sign up</a> |
+                <a href="{{ url_for('login') }}">sign in</a>
+            {% endif %}
+        </div>
+        <hr>
+        {% block content %}{% endblock %}
+    </body>
+</html>

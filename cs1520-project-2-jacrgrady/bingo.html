@@ -1,0 +1,45 @@
+<html>
+
+<head>
+<title>Bingo</title>
+
+<link rel="stylesheet" type="text/css" href="style.css" />
+
+<script type="text/javascript" src="script.js"></script>
+
+</head>
+
+<body onload="setUp()">
+
+	<div id="container">
+    <table>
+    	<tr>
+    		<th>Wins</th>
+			<th>Losses</th>
+    	</tr>
+    	<tr>
+    		<th id="wins">Wins</th>
+			<th id="losses">Losses</th>
+    	</tr>
+    	<tr id="lastRow">
+			<th>
+				<button onclick="newRandom()" class="gameSelection">new-game-random</button>
+				<button onclick="won()" class="winOrLose" id="win">I won</button>
+			</th>
+			<th>
+				<button onclick="newSpecified()" class="gameSelection">new-game-specified</button>
+				<button onclick="lost()" class="winOrLose">I lost</button>
+
+			</th>
+    	</tr>
+    </table>
+	
+	
+	<div id="content">
+		<table id="bingotable">
+		</table>
+	</div>
+
+</body>
+
+</html>

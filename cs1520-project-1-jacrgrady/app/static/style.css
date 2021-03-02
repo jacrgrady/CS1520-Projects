@@ -1,0 +1,80 @@
+body {
+    background: #3B322C;
+    font-family: 'Trebuchet MS', sans-serif;
+    font-size: 14px;
+}
+
+a {
+    color: #435155;
+}
+
+a:hover {
+    color: #b4b9bb;
+}
+
+.event_link{
+    text-decoration: none;
+    padding: 7px 0px 7px 0px; 
+    display: inline-block;
+    border: 1px solid #435155;
+    width:100%;
+}
+
+body {
+    background-color: #f9f9f9;
+    border: 1px solid #9fbca6;
+    width: 80%;
+    margin: 30px auto;
+}
+body h1 {
+    background: #9fbca6;
+    margin: 0px;
+    padding: 10px 14px;
+    color: white;
+    letter-spacing: 1px;
+    font-weight: normal;
+}
+
+body div.navigation {
+    background: #DEE9E8;
+    padding: 4px 10px;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #eee;
+    color: #888;
+    font-size: 12px;
+    letter-spacing: 0.5px;
+}
+
+body div.navigation a {
+    color: #435155;
+    font-weight: bold;
+}
+
+div.error {
+    margin: 10px 0;
+    background: #FAE4E4;
+    border: 1px solid #DD6F6F;
+    padding: 4px;
+    font-size: 13px;
+}
+div.error p{
+	color: red
+}
+
+input[type="text"],
+input[type="password"] {
+    background: white;
+    border: 1px solid #BFE6E2;
+    padding: 2px;
+    font-size: 14px;
+    color: #105751;
+}
+
+input[type="submit"] {
+    background: #105751;
+    border: 1px solid #073B36;
+    padding: 1px 3px;
+    font-size: 14px;
+    font-weight: bold;
+    color: white;
+}

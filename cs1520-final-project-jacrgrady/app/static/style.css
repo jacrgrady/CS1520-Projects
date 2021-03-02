@@ -1,0 +1,22 @@
+body {
+    background-color: #f9f9f9;
+    border: 1px solid #9fbca6;
+    width: 80%;
+    margin: 30px auto;
+    font-family: 'Trebuchet MS', sans-serif;
+    font-size: 14px;
+    min-width: 300px;
+}
+.content {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+a {
+    color: #435155;
+}
+
+a:hover {
+    color: #b4b9bb;
+}
+

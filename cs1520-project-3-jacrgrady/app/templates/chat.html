@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block content %}
+	<h1 id="chatName"></h1>
+	<div id="chats">
+	</div>	
+  <input type="text" id="newChat"><br><br>
+  <input type="submit" value="Send" id="submitNewChat">
+	{% if g.user == chat.author%}
+		<input type="submit" value="Delete Room" id="delete_room">
+	{% endif %}
+	  
+{% endblock %}

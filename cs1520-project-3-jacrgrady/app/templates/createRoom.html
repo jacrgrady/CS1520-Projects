@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Create Room</h2>
+{% if error %}<div class="error"><p><strong>Error:</strong> {{ error|safe }}</p></div>{% endif %}
+<form action="" method="post">
+  <dl>
+    <dt>name:
+    <dd><input type="text" name="name" id="name" size="30" value="{{ request.form.name }}">
+  <div class="actions"><input type="submit" value="Create Room"></div>
+</form>
+{% endblock %}
